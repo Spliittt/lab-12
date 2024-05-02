@@ -1,0 +1,17 @@
+class MyGUI:
+  def __init__(self):
+   
+    self.__main_window = tk.Tk()
+    self.__main_window.title('Oval')
+    self.create_widget()
+    tk.mainloop()
+  def create_widget(self):
+    
+    self.__canvas = tk.Canvas(self.__main_window, width = 400, height = 300)
+  
+    self.__canvas.create_oval(160, 20, 359, 269, fill = 'ivory4',
+                              outline = 'cyan', width = 3)
+    self.__canvas.create_oval(100, 50, 300, 259, fill = 'blue',
+                              outline = 'light goldenrod', width = 3)
+    self.__canvas.pack()
+my_gui = MyGUI()
